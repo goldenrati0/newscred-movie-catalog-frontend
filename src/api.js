@@ -2,7 +2,7 @@ import axios from "axios";
 import {FAV_MOVIE_IMDB_IDS} from "./config";
 
 
-const API_BASE_URL = "http://127.0.0.1:8080";
+const API_BASE_URL = process.env.API_BASE_URL || "http://127.0.0.1:8080";
 const USER_SIGNUP = "/user/register";
 const USER_LOGIN = "/user/login";
 const USER_INFO = "/user/me";
