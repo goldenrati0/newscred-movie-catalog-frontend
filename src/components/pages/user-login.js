@@ -1,7 +1,7 @@
 import React from 'react'
-import {Button, Container, Divider, Form, Header, Segment} from "semantic-ui-react";
+import {Button, Container, Form, Header, Segment} from "semantic-ui-react";
 import MovieAPI from "../../api";
-import {Link, Redirect} from "react-router-dom";
+import {Redirect} from "react-router-dom";
 import {MenuItemProps} from "../../config";
 import TopMenu from "../menu/menu";
 
