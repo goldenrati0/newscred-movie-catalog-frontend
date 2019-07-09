@@ -79,7 +79,7 @@ class UserSignupPage extends React.Component {
                                             onChange={this.handleChange} style={{width: 400}}/>
                                 <Form.Input required type="password" label='Password' name={"password"} value={password}
                                             placeholder="****" onChange={this.handleChange} style={{width: 400}}/>
-                                <Button>Login</Button>
+                                <Button>Signup</Button>
                             </Form>
                         </Container>
                     </div>
