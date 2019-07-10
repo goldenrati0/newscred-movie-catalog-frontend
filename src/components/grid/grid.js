@@ -23,7 +23,13 @@ class CustomModal extends React.Component {
                     <Card.Content>
                         <Card.Header>{item.Title}</Card.Header>
                         <Card.Meta>{item.Year || "2018"}</Card.Meta>
-                        <Card.Description>{item.ShortPlot || item.Plot.substr(0, item.Plot.length / 4)}</Card.Description>
+                        {
+                            item.Plot.length >= 50 ?
+                                <Card.Description>{item.ShortPlot || item.Plot.substr(0, 50)}</Card.Description>
+                                :
+                                <Card.Description>{item.ShortPlot || item.Plot}</Card.Description>
+                        }
+
                     </Card.Content>
                     <Card.Content extra>
                         <Container textAlign={"center"}>
