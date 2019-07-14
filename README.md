@@ -1,3 +1,25 @@
+# newscred-movie-catalog-backend
+This is a personal movie catalog website's frontend, written using Javascript and React. This application exposes user interface capable of
+- Registering Users
+- Authenticating Users
+- Searching for movies and showing them
+- Marking movies as favorite
+
+*Find the Python backend for this application [here.](https://github.com/tahmid-choyon/newscred-movie-catalog-backend)*
+
+### Tech stack
+
+| Section  | Technology / Framework |
+| ------------- | ------------- |
+| Rendering Library  | ReactJS  |
+| UI Components  | Semantic UI React  |
+
+
+
+
+============================================================================================
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
