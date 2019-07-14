@@ -1,4 +1,4 @@
-# newscred-movie-catalog-backend
+# newscred-movie-catalog-frontend
 This is a personal movie catalog website's frontend, written using Javascript and React. This application exposes user interface capable of
 - Registering Users
 - Authenticating Users
