@@ -3,8 +3,6 @@
 # ide
 .idea/
 
-# configs
-config.js
 
 # dependencies
 /node_modules

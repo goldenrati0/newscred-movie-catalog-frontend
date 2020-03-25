@@ -2,9 +2,9 @@ import React from 'react'
 import CustomModal from "../grid/grid";
 import LoadMoreButton from "../load-more-btn/load-more-btn";
 import TopMenu from "../menu/menu";
-import {Divider} from "semantic-ui-react";
-import {MenuItemProps, ModalProps} from '../../config'
-import {Redirect} from "react-router-dom";
+import { Divider } from "semantic-ui-react";
+import { MenuItemProps, ModalProps } from '../../config'
+import { Redirect } from "react-router-dom";
 
 class Home extends React.Component {
 
@@ -19,26 +19,26 @@ class Home extends React.Component {
         this.getDataFromMenu = (response) => {
             if (!response.error) {
                 if (response.msg === 'login required') {
-                    this.setState({loggedIn: false});
+                    this.setState({ loggedIn: false });
                 } else {
-                    this.setState({movies: [...response.response.data.result]});
+                    this.setState({ movies: [...response.response.data.result] });
                 }
             } else {
                 console.log(response.data.result);
-                this.setState({movies: response.data.result});
+                this.setState({ movies: response.data.result });
             }
         };
 
         this.getDataFromLoadingPage = (response) => {
             if (!response.error) {
                 if (response.msg === 'login required') {
-                    this.setState({loggedIn: false});
+                    this.setState({ loggedIn: false });
                 } else {
-                    this.setState({movies: [...this.state.movies, ...response.response.data.result]});
+                    this.setState({ movies: [...this.state.movies, ...response.response.data.result] });
                 }
             } else {
                 console.log(response.response.data.result);
-                this.setState({movies: [...this.state.movies, ...response.response.data.result]});
+                this.setState({ movies: [...this.state.movies, ...response.response.data.result] });
             }
         };
 
@@ -59,17 +59,17 @@ class Home extends React.Component {
     componentWillMount() {
         const token = localStorage.getItem("token");
         if (!token) {
-            this.setState({loggedIn: false});
+            this.setState({ loggedIn: false });
             return
         }
 
-        this.setState({movies: [...ModalProps.cardItems]});
+        this.setState({ movies: [...ModalProps.cardItems] });
         localStorage.removeItem("searchQuery");
         localStorage.removeItem("currentPage");
     }
 
     render() {
-        const {loggedIn} = this.state;
+        const { loggedIn } = this.state;
 
         if (loggedIn) {
             return (
@@ -81,7 +81,7 @@ class Home extends React.Component {
                     />
 
                     <div className="container">
-                        <Divider/>
+                        <Divider />
                     </div>
 
                     <CustomModal
@@ -90,7 +90,7 @@ class Home extends React.Component {
                     />
 
                     <div className="container">
-                        <Divider/>
+                        <Divider />
                     </div>
 
                     <LoadMoreButton
@@ -99,13 +99,13 @@ class Home extends React.Component {
                     />
 
                     <Divider
-                        style={{marginBottom: 100}}
+                        style={{ marginBottom: 100 }}
                     />
                 </div>
             )
         } else {
             return (
-                <Redirect to={"/login"}/>
+                <Redirect to={"/login"} />
             )
         }
     }
